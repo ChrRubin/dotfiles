@@ -20,7 +20,8 @@ swaylock \
   --inside-clear-color $inside \
   --inside-ver-color $inside \
   --inside-wrong-color $inside \
-  --line-uses-inside \
+  --line-color "30303025" \
+  --ring-color $inside \
   --separator-color $transparent \
   --font "system-ui" \
   --text-color $text \
