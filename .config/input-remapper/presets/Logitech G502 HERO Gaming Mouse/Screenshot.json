@@ -1,0 +1,16 @@
+{
+    "mapping": {
+        "1,278,1": [
+            "KEY_ENTER",
+            "keyboard"
+        ],
+        "1,277,1": [
+            "KEY_LEFTCTRL + v",
+            "keyboard"
+        ],
+        "1,281,1": [
+            "m(\n  Alt_L,\n  k(Print)\n)\n.w(1000)\n.k(KEY_F14)",
+            "keyboard"
+        ]
+    }
+}

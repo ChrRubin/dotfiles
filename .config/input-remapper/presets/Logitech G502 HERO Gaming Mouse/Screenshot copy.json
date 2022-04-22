@@ -1,0 +1,16 @@
+{
+    "mapping": {
+        "1,281,1": [
+            "m(Alt_L, k(Print)).w(500).k(KEY_F14)",
+            "keyboard"
+        ],
+        "1,278,1": [
+            "m(KEY_LEFTCTRL,k(v)).w(50).k(KEY_ENTER)",
+            "keyboard"
+        ],
+        "1,277,1": [
+            "k(Escape).w(50).m(KEY_LEFTCTRL,k(w)).w(100).k(Escape)",
+            "keyboard"
+        ]
+    }
+}

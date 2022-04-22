@@ -1,0 +1,32 @@
+{
+    "mapping": {
+        "1,281,1": [
+            "KEY_LEFTCTRL",
+            "keyboard"
+        ],
+        "1,277,1": [
+            "KEY_3",
+            "keyboard"
+        ],
+        "1,278,1": [
+            "KEY_4",
+            "keyboard"
+        ],
+        "1,280,1": [
+            "KEY_G",
+            "keyboard"
+        ],
+        "1,279,1": [
+            "KEY_F",
+            "keyboard"
+        ],
+        "2,6,-1": [
+            "KEY_1",
+            "keyboard"
+        ],
+        "2,6,1": [
+            "KEY_2",
+            "keyboard"
+        ]
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "gamepad": {
+        "joystick": {
+            "left_purpose": "buttons",
+            "right_purpose": "mouse",
+            "pointer_speed": 99.0187361169025
+        }
+    },
+    "mapping": {
+        "1,304,1": [
+            "KEY_Z",
+            "keyboard"
+        ],
+        "1,305,1": [
+            "KEY_X",
+            "keyboard"
+        ],
+        "1,308,1": [
+            "KEY_S",
+            "keyboard"
+        ],
+        "1,307,1": [
+            "KEY_A",
+            "keyboard"
+        ],
+        "1,311,1": [
+            "KEY_W",
+            "keyboard"
+        ],
+        "1,310,1": [
+            "KEY_Q",
+            "keyboard"
+        ],
+        "3,17,-1": [
+            "KEY_UP",
+            "keyboard"
+        ],
+        "3,16,1": [
+            "KEY_RIGHT",
+            "keyboard"
+        ],
+        "3,17,1": [
+            "KEY_DOWN",
+            "keyboard"
+        ],
+        "3,16,-1": [
+            "KEY_LEFT",
+            "keyboard"
+        ],
+        "3,1,-1": [
+            "KEY_UP",
+            "keyboard"
+        ],
+        "3,0,1": [
+            "KEY_RIGHT",
+            "keyboard"
+        ],
+        "3,1,1": [
+            "KEY_DOWN",
+            "keyboard"
+        ],
+        "3,0,-1": [
+            "KEY_LEFT",
+            "keyboard"
+        ],
+        "3,2,1": [
+            "KEY_O",
+            "keyboard"
+        ],
+        "3,5,1": [
+            "KEY_O",
+            "keyboard"
+        ],
+        "1,318,1": [
+            "BTN_LEFT",
+            "mouse"
+        ],
+        "1,315,1": [
+            "Return",
+            "keyboard"
+        ],
+        "1,314,1": [
+            "Shift_R",
+            "keyboard"
+        ]
+    }
+}

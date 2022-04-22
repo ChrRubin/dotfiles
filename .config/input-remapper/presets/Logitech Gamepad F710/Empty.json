@@ -1,0 +1,10 @@
+{
+    "gamepad": {
+        "joystick": {
+            "left_purpose": "none",
+            "right_purpose": "mouse",
+            "pointer_speed": 31.18894749191779
+        }
+    },
+    "mapping": {}
+}

@@ -1,0 +1,8 @@
+{
+    "gamepad": {
+        "joystick": {
+            "right_purpose": "mouse"
+        }
+    },
+    "mapping": {}
+}

@@ -1,0 +1,475 @@
+[
+  {
+    "name": "main-top",
+    "output": "HDMI-A-2",
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+    "homogeneous": true,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "padding-horizontal": 10,
+    "padding-vertical": 0,
+    "spacing": 10,
+    "controls": "right",
+    "items-padding": 0,
+    "css-name": "panel-top",
+    "icons": "light",
+    "modules-left": [
+      "sway-taskbar"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "scratchpad",
+      "tray"
+    ],
+    "sway-taskbar": {
+      "workspace-menu": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "name-max-len": 10,
+      "image-size": 16,
+      "workspaces-spacing": 5,
+      "task-padding": 2,
+      "show-app-icon": true,
+      "show-app-name": true,
+      "show-layout": false,
+      "workspace-buttons": false,
+      "all-workspaces": true,
+      "mark-autotiling": true,
+      "mark-xwayland": true,
+      "all-outputs": false
+    },
+    "controls-settings": {
+      "alignment": "right",
+      "components": [
+        "volume"
+      ],
+      "commands": {
+        "battery": "",
+        "net": "nm-connection-editor",
+        "bluetooth": "blueman-manager"
+      },
+      "custom-items": [
+        {
+          "name": "Wallpapers",
+          "icon": "azote",
+          "cmd": "azote"
+        },
+        {
+          "name": "Look & Feel",
+          "icon": "nwg-look",
+          "cmd": "nwg-look"
+        },
+        {
+          "name": "Outputs",
+          "icon": "display",
+          "cmd": "wdisplays && sway-save-outputs"
+        },
+        {
+          "name": "Panel settings",
+          "icon": "nwg-panel",
+          "cmd": "nwg-panel-config"
+        },
+        {
+          "name": "Shell settings",
+          "icon": "nwg-shell",
+          "cmd": "nwg-shell-config"
+        }
+      ],
+      "menu": {
+        "name": "Exit",
+        "icon": "system-shutdown-symbolic",
+        "items": [
+          {
+            "name": "Lock",
+            "cmd": "$HOME/.config/sway/lock.sh"
+          },
+          {
+            "name": "Logout",
+            "cmd": "swaymsg exit"
+          },
+          {
+            "name": "Restart",
+            "cmd": "systemctl reboot"
+          },
+          {
+            "name": "Shutdown",
+            "cmd": "clipman clear --all && systemctl -i poweroff"
+          }
+        ]
+      },
+      "show-values": false,
+      "interval": 1,
+      "icon-size": 18,
+      "hover-opens": false,
+      "leave-closes": true,
+      "css-name": "controls-window",
+      "net-interface": "wlo1",
+      "system-shutdown-symbolic": "system-shutdown",
+      "output-switcher": false,
+      "window-width": 320,
+      "window-margin": 6,
+      "backlight-device": "",
+      "root-css-name": "controls-overview"
+    },
+    "playerctl": {},
+    "clock": {
+      "format": "%a %d %b %X",
+      "interval": 1,
+      "on-right-click": "",
+      "tooltip-text": "",
+      "on-left-click": "gnome-calendar",
+      "on-middle-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "clock",
+      "root-css-name": "root-clock"
+    },
+    "executor-updates": {
+      "script": "sway-check-updates",
+      "interval": 900,
+      "icon-size": 16,
+      "on-left-click": "foot sway-update",
+      "tooltip-text": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "root-css-name": "",
+      "icon-placement": "left"
+    },
+    "width": "auto",
+    "button-config": {
+      "command": "nwg-panel-config",
+      "icon": "nwg-panel",
+      "label": "",
+      "label-position": "right",
+      "css-name": "button-custom",
+      "icon-size": 16
+    },
+    "sway-workspaces": {
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "show-icon": true,
+      "image-size": 16,
+      "show-name": true,
+      "name-length": 20,
+      "mark-autotiling": false,
+      "mark-content": true,
+      "show-layout": true
+    },
+    "scratchpad": {
+      "css-name": "",
+      "icon-size": 20
+    },
+    "menu-start": "off",
+    "menu-start-settings": {},
+    "executor-cpuav": {
+      "script": "gopsuinfo -i a",
+      "tooltip-text": "average CPU load",
+      "on-left-click": "alacritty -e htop",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "right",
+      "icon-size": 16,
+      "interval": 3
+    },
+    "executor-cpubar": {
+      "script": "gopsuinfo -c g",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 3
+    },
+    "dwl-tags": {},
+    "tray": {
+      "icon-size": 16,
+      "root-css-name": "tray",
+      "inner-css-name": "inner-tray",
+      "smooth-scrolling-threshold": 0
+    },
+    "swaync": {
+      "tooltip-text": "Notifications",
+      "on-left-click": "swaync-client -t",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "root-executor",
+      "css-name": "executor",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 1,
+      "always-show-icon": true
+    },
+    "executor-memory": {
+      "script": "gopsuinfo -i m",
+      "interval": 5,
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "icon-size": 16,
+      "icon-placement": "right",
+      "root-css-name": ""
+    },
+    "button-clipman": {
+      "command": "clipman pick -t wofi",
+      "icon": "edit-paste",
+      "label": "",
+      "label-position": "right",
+      "css-name": "",
+      "icon-size": 16
+    },
+    "button-icontest": {
+      "command": "",
+      "icon": "visual-studio-code",
+      "label": "",
+      "label-position": "right",
+      "css-name": "",
+      "icon-size": 16
+    }
+  },
+  {
+    "name": "sec-top",
+    "output": "HDMI-A-1",
+    "layer": "bottom",
+    "position": "top",
+    "controls": "off",
+    "menu-start": "off",
+    "width": "auto",
+    "height": 30,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "padding-horizontal": 10,
+    "padding-vertical": 0,
+    "spacing": 10,
+    "icons": "light",
+    "css-name": "panel-top",
+    "modules-left": [
+      "sway-taskbar"
+    ],
+    "modules-center": [],
+    "modules-right": [
+      "executor-cpuav",
+      "executor-network",
+      "executor-temp_2",
+      "clock"
+    ],
+    "controls-settings": {
+      "components": [
+        "net",
+        "brightness",
+        "volume",
+        "battery"
+      ],
+      "commands": {
+        "net": "",
+        "bluetooth": "",
+        "battery": ""
+      },
+      "show-values": false,
+      "interval": 1,
+      "icon-size": 16,
+      "hover-opens": true,
+      "leave-closes": true,
+      "root-css-name": "controls-overview",
+      "css-name": "controls-window",
+      "net-interface": "",
+      "custom-items": [
+        {
+          "name": "Panel settings",
+          "icon": "nwg-panel",
+          "cmd": "nwg-panel-config"
+        }
+      ],
+      "menu": {
+        "name": "unnamed",
+        "icon": "",
+        "items": []
+      }
+    },
+    "menu-start-settings": {
+      "cmd-lock": "swaylock -f -c 000000",
+      "cmd-logout": "swaymsg exit",
+      "cmd-restart": "systemctl reboot",
+      "cmd-shutdown": "systemctl -i poweroff",
+      "autohide": true,
+      "file-manager": "thunar",
+      "height": 0,
+      "icon-size-large": 32,
+      "icon-size-small": 16,
+      "icon-size-button": 16,
+      "margin-bottom": 0,
+      "margin-left": 0,
+      "margin-right": 0,
+      "margin-top": 0,
+      "padding": 2,
+      "terminal": "foot",
+      "width": 0
+    },
+    "sway-taskbar": {
+      "workspace-menu": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "name-max-len": 10,
+      "image-size": 16,
+      "workspaces-spacing": 5,
+      "task-padding": 2,
+      "show-app-icon": true,
+      "show-app-name": true,
+      "show-layout": false,
+      "workspace-buttons": false,
+      "all-workspaces": true,
+      "mark-autotiling": true,
+      "mark-xwayland": true,
+      "all-outputs": false
+    },
+    "sway-workspaces": {
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "show-icon": true,
+      "image-size": 16,
+      "show-name": true,
+      "name-length": 40,
+      "mark-autotiling": true,
+      "mark-content": true,
+      "show-layout": true
+    },
+    "clock": {
+      "format": "%I:%M %p",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "root-clock",
+      "css-name": "clock",
+      "interval": 1
+    },
+    "playerctl": {
+      "buttons-position": "left",
+      "icon-size": 16,
+      "chars": 30,
+      "button-css-name": "",
+      "label-css-name": "",
+      "interval": 1
+    },
+    "scratchpad": {
+      "css-name": "",
+      "icon-size": 16
+    },
+    "dwl-tags": {
+      "tag-names": "1 2 3 4 5 6 7 8 9",
+      "title-limit": 55
+    },
+    "tray": {},
+    "executor-cpuav": {
+      "script": "gopsuinfo -i a",
+      "interval": 2,
+      "tooltip-text": "CPU average load",
+      "on-left-click": "alacritty -e htop",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "",
+      "icon-size": 16,
+      "icon-placement": "right",
+      "root-css-name": ""
+    },
+    "executor-network": {
+      "script": "gopsuinfo -i k",
+      "tooltip-text": "Network activity",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "right",
+      "icon-size": 16,
+      "interval": 1
+    },
+    "executor-temp_2": {
+      "script": "psuinfo -It",
+      "tooltip-text": "CPU temperature",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "right",
+      "icon-size": 16,
+      "interval": 5
+    },
+    "button-icontest1": {
+      "command": "",
+      "icon": "visual-studio-code",
+      "label": "",
+      "label-position": "right",
+      "css-name": "",
+      "icon-size": 16
+    },
+    "button-icontest2": {
+      "command": "",
+      "icon": "/usr/share/input-remapper/input-remapper.svg",
+      "label": "",
+      "label-position": "right",
+      "css-name": "",
+      "icon-size": 16
+    }
+  }
+]

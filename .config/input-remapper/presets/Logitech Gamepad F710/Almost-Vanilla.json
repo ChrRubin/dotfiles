@@ -1,0 +1,77 @@
+{
+    "gamepad": {
+        "joystick": {
+            "left_purpose": "none"
+        }
+    },
+    "mapping": {
+        "1,304,1": [
+            "BTN_A",
+            "gamepad"
+        ],
+        "1,305,1": [
+            "BTN_B",
+            "gamepad"
+        ],
+        "1,308,1": [
+            "BTN_Y",
+            "gamepad"
+        ],
+        "1,307,1": [
+            "BTN_X",
+            "gamepad"
+        ],
+        "3,17,1": [
+            "BTN_DPAD_DOWN\n# Broken mapping:\n# No target can handle all specified keycodes",
+            "keyboard"
+        ],
+        "3,16,-1": [
+            "BTN_DPAD_LEFT\n# Broken mapping:\n# No target can handle all specified keycodes",
+            "keyboard"
+        ],
+        "3,17,-1": [
+            "BTN_DPAD_UP\n# Broken mapping:\n# No target can handle all specified keycodes",
+            "keyboard"
+        ],
+        "3,16,1": [
+            "BTN_DPAD_RIGHT\n# Broken mapping:\n# No target can handle all specified keycodes",
+            "keyboard"
+        ],
+        "1,310,1": [
+            "BTN_TL",
+            "gamepad"
+        ],
+        "1,311,1": [
+            "BTN_TR",
+            "gamepad"
+        ],
+        "3,2,1": [
+            "BTN_TL2",
+            "gamepad"
+        ],
+        "3,5,1": [
+            "BTN_TR2",
+            "gamepad"
+        ],
+        "1,317,1": [
+            "BTN_THUMBL",
+            "gamepad"
+        ],
+        "1,318,1": [
+            "BTN_THUMBR",
+            "gamepad"
+        ],
+        "1,314,1": [
+            "BTN_SELECT",
+            "gamepad"
+        ],
+        "1,315,1": [
+            "BTN_START",
+            "gamepad"
+        ],
+        "1,316,1": [
+            "BTN_MODE",
+            "gamepad"
+        ]
+    }
+}
