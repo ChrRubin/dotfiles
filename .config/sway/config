@@ -153,19 +153,19 @@ input * xkb_numlock enabled
 
 # kill focused window
 bindsym $Mod+Shift+q kill
-bindsym Mod1+q kill
+# bindsym Mod1+q kill
 bindsym Mod1+F4 kill
 
 # core applications
 bindsym $Mod+Return       exec $term
-bindsym Mod1+Shift+Return exec $term
+# bindsym Mod1+Shift+Return exec $term
 bindsym Control+Mod1+t   exec $term
 bindsym $Mod+t            exec $term
-bindsym $Mod+d            exec $dock
+# bindsym $Mod+d            exec $dock
 bindsym $Mod+e            exec $editor
 bindsym $Mod+w            exec $browser
-bindsym Control+space     exec $launcher
-bindsym Mod1+F1           exec $launcher
+bindsym $Mod+d     exec $launcher
+# bindsym Mod1+F1           exec $launcher
 bindsym $Mod+f            exec $filemanager
 bindsym $Mod+c            exec swaync-client -t
 
@@ -345,9 +345,9 @@ default_orientation horizontal
 bindsym $Mod+Shift+f fullscreen
 
 # show/hide help
-bindsym Mod1+h exec pkill -f -12 nwg-wrapper
+# bindsym Mod1+h exec pkill -f -12 nwg-wrapper
 # move help to front/back
-bindsym Mod1+Shift+h exec pkill -f -10 nwg-wrapper
+# bindsym Mod1+Shift+h exec pkill -f -10 nwg-wrapper
 
 
 ###############      Border & Gaps     ###############
@@ -376,7 +376,7 @@ for_window [class="(?i)(?:lxappearance)"] floating enable
 # for_window [app_id="(?i)(?:firefox|chromium)"] border none
 for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
 
-for_window [app_id="(?i)(?:input-remapper-gtk|keepassxc|wev|mpv|gcolor3|helvum|characters|file-roller|zenity)"] floating enable
+for_window [app_id="(?i)(?:input-remapper-gtk|keepassxc|wev|mpv|gcolor3|helvum|characters|file-roller|zenity|catfish)"] floating enable
 for_window [app_id="org.gnome.Calendar"] floating enable, resize set height 600, resize set width 600
 for_window [app_id="org.gnome.Calculator"] floating enable, resize set height 600, resize set width 400
 for_window [app_id="discover-overlay"] floating enable, resize set height 800, resize set width 660
