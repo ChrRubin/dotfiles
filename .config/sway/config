@@ -383,7 +383,7 @@ for_window [app_id="discover-overlay"] floating enable, resize set height 800, r
 for_window [app_id="piper"] floating enable, resize set height 340, resize set width 980
 for_window [app_id="(?i)firefox" title="^(?i)(?:about firefox|extension:|about tor browser)"] floating enable
 for_window [app_id="(?i)firefox" title="(?i)sharing indicator"] floating enable, move position 0 0
-for_window [class="(?i)steam" title="^(?i)(?:steam guard|friends list|steam - news)"] floating enable
+for_window [class="(?i)steam" title="^(?i)(?:steam guard|friends list|create or select)"] floating enable
 for_window [class="(?i)steam" title="^(?i)steam - news"] floating enable, resize set height 830, resize set width 630
 for_window [app_id="thunar" title="^(?i)file operation"] floating enable
 for_window [app_id="python3" title="^(?i)Tor Browser Launcher Settings"] floating enable
@@ -394,7 +394,7 @@ floating_maximum_size 1024 x 1024
 popup_during_fullscreen smart
 
 # clipman
-exec wl-paste -t text --watch clipman store --no-persist
+exec wl-paste -t text --watch $HOME/.config/sway/clipman.sh
 bindsym $Mod+Control+c exec clipman pick -t wofi
 
 include /etc/sway/config.d/*
