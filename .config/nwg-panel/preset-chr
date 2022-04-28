@@ -124,7 +124,7 @@
     },
     "playerctl": {},
     "clock": {
-      "format": "%a %d %b %X",
+      "format": "%a %d %b %r",
       "interval": 1,
       "on-right-click": "",
       "tooltip-text": "",

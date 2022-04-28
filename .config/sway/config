@@ -376,17 +376,18 @@ for_window [class="(?i)(?:lxappearance)"] floating enable
 # for_window [app_id="(?i)(?:firefox|chromium)"] border none
 for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
 
-for_window [app_id="(?i)(?:input-remapper-gtk|keepassxc|wev|mpv|gcolor3|helvum|characters|file-roller|zenity|catfish)"] floating enable
-for_window [app_id="org.gnome.Calendar"] floating enable, resize set height 600, resize set width 600
-for_window [app_id="org.gnome.Calculator"] floating enable, resize set height 600, resize set width 400
-for_window [app_id="discover-overlay"] floating enable, resize set height 800, resize set width 660
-for_window [app_id="piper"] floating enable, resize set height 340, resize set width 980
-for_window [app_id="(?i)firefox" title="^(?i)(?:about firefox|extension:|about tor browser)"] floating enable
+for_window [app_id="(?i)(?:input-remapper-gtk|keepassxc|wev|mpv|gcolor3|helvum|characters|file-roller|zenity|catfish|lutris|io.github.celluloid_player.Celluloid)"] floating enable
+for_window [app_id="org.gnome.Calendar"] floating enable, resize set width 600, resize set height 600
+for_window [app_id="org.gnome.Calculator"] floating enable, resize set width 400, resize set height 600
+for_window [app_id="discover-overlay"] floating enable, resize set width 660, resize set height 800
+for_window [app_id="piper"] floating enable, resize set width 980, resize set height 340
+for_window [app_id="(?i)firefox" title="^(?i)(?:about (?:firefox|tor browser)|extension:|page info)"] floating enable
 for_window [app_id="(?i)firefox" title="(?i)sharing indicator"] floating enable, move position 0 0
 for_window [class="(?i)steam" title="^(?i)(?:steam guard|friends list|create or select)"] floating enable
-for_window [class="(?i)steam" title="^(?i)steam - news"] floating enable, resize set height 830, resize set width 630
+for_window [class="(?i)steam" title="^(?i)steam - news"] floating enable, resize set width 630, resize set height 830
 for_window [app_id="thunar" title="^(?i)file operation"] floating enable
 for_window [app_id="python3" title="^(?i)Tor Browser Launcher Settings"] floating enable
+for_window [app_id="virt-manager" title="^Virtual Machine Manager$"] floating enable, resize set width 800, resize set height 600
 # for_window [app_id="(?i)(?:terraria)"] border none
 
 floating_maximum_size 1024 x 1024
