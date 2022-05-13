@@ -381,9 +381,9 @@ for_window [app_id="org.gnome.Calendar"] floating enable, resize set width 600, 
 for_window [app_id="org.gnome.Calculator"] floating enable, resize set width 400, resize set height 600
 for_window [app_id="discover-overlay"] floating enable, resize set width 660, resize set height 800
 for_window [app_id="piper"] floating enable, resize set width 980, resize set height 340
-for_window [app_id="(?i)firefox" title="^(?i)(?:about (?:firefox|tor browser)|extension:|page info)"] floating enable
+for_window [app_id="(?i)firefox" title="^(?i)(?:about (?:.*firefox|tor browser)|extension:|page info)"] floating enable
 for_window [app_id="(?i)firefox" title="(?i)sharing indicator"] floating enable, move position 0 0
-for_window [class="(?i)steam" title="^(?i)(?:steam guard|friends list|create or select)"] floating enable
+for_window [class="(?i)steam" title="^(?i)(?:steam guard|friends list|create or select|steam - system information)"] floating enable
 for_window [class="(?i)steam" title="^(?i)steam - news"] floating enable, resize set width 630, resize set height 830
 for_window [app_id="thunar" title="^(?i)file operation"] floating enable
 for_window [app_id="python3" title="^(?i)Tor Browser Launcher Settings"] floating enable
