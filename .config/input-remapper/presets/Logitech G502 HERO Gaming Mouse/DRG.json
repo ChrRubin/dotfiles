@@ -4,28 +4,28 @@
             "KEY_LEFTCTRL",
             "keyboard"
         ],
-        "1,277,1": [
-            "KEY_3",
-            "keyboard"
-        ],
-        "1,278,1": [
-            "KEY_4",
+        "1,279,1": [
+            "g",
             "keyboard"
         ],
         "1,280,1": [
-            "KEY_G",
-            "keyboard"
-        ],
-        "1,279,1": [
-            "KEY_F",
+            "g",
             "keyboard"
         ],
         "2,6,-1": [
-            "KEY_1",
+            "1",
             "keyboard"
         ],
         "2,6,1": [
-            "KEY_2",
+            "2",
+            "keyboard"
+        ],
+        "1,278,1": [
+            "4",
+            "keyboard"
+        ],
+        "1,277,1": [
+            "3",
             "keyboard"
         ]
     }
