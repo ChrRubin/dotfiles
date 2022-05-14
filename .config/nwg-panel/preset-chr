@@ -73,7 +73,7 @@
         {
           "name": "Outputs",
           "icon": "display",
-          "cmd": "wdisplays && sway-save-outputs"
+          "cmd": "nwg-displays"
         },
         {
           "name": "Panel settings",
@@ -124,16 +124,17 @@
     },
     "playerctl": {},
     "clock": {
-      "format": "%a %d %b %r",
+      "format": "%d %b | %I:%M %p",
       "interval": 1,
       "on-right-click": "",
-      "tooltip-text": "",
-      "on-left-click": "gnome-calendar",
+      "tooltip-text": "%a %d %b %Y | %r",
+      "on-left-click": "",
       "on-middle-click": "",
       "on-scroll-up": "",
       "on-scroll-down": "",
       "css-name": "clock",
-      "root-css-name": "root-clock"
+      "root-css-name": "root-clock",
+      "tooltip-date-format": true
     },
     "executor-updates": {
       "script": "sway-check-updates",
@@ -386,7 +387,7 @@
     },
     "clock": {
       "format": "%I:%M %p",
-      "tooltip-text": "",
+      "tooltip-text": "%a %d %b %Y | %r",
       "on-left-click": "",
       "on-middle-click": "",
       "on-right-click": "",
@@ -394,7 +395,8 @@
       "on-scroll-down": "",
       "root-css-name": "root-clock",
       "css-name": "clock",
-      "interval": 1
+      "interval": 1,
+      "tooltip-date-format": true
     },
     "playerctl": {
       "buttons-position": "left",

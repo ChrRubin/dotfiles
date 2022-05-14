@@ -1,4 +1,3 @@
-set $lang 'us'
 set $term alacritty
 set $browser MOZ_ENABLE_WAYLAND=1 firefox
 set $filemanager thunar

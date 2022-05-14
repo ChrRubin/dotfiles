@@ -1,5 +1,14 @@
-# ArchLabs sway config
+# The files we include below will be created / overwritten by nwg-shell tools
 #
+include variables
+include outputs
+include autostart
+include workspaces
+include keyboard
+include pointer
+include touchpad
+
+# ArchLabs sway config
 # Read `man 5 sway` for reference.
 
 # border & title
@@ -55,10 +64,6 @@ mode "nag" {
 # 'Reload Sway' option will be initially selected instead of the 'Exit Sway' option
 swaynag_command $nag -R
 
-# The file we include below is created and will be overwritten by nwg-shell-config GUI!
-#
-include ~/.config/sway/variables
-
 ############### Apply GTK settings ##################
 
 #exec_always import-gsettings
@@ -71,21 +76,7 @@ include ~/.config/sway/variables
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec ~/.azotebg
 
-# The files we include below are created and will be overwritten by nwg-shell-config GUI!
-#
-include ~/.config/sway/outputs
-include ~/.config/sway/autostart
-#
-
-#output * adaptive_sync on
-
-# monitors (edit & unhash)
-set $Mon1 HDMI-A-2
-set $Mon2 HDMI-A-1
-
-output $Mon1 resolution 1920x1080 position 0,0
-output $Mon2 mode 1280x1024@60.020Hz position 1920,0
-focus output $Mon1
+focus output HDMI-A-2
 
 ### Turn off screen on lid closed
 #set $laptop eDP-1
@@ -103,51 +94,10 @@ focus output $Mon1
 # your displays after another 3300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-# Enables inhibit_idle when playing audio
-#exec sway-audio-idle-inhibit
-
 # wob
 set $wob wob --anchor bottom --margin 50 --border-color "#ffffffff" --background-color "#1e1e1eff" --bar-color "#ffffffff"
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | $wob
-
-###############  Input configuration  ##################
-#
-# Example configuration:
-#
-# input "2:14:SynPS/2_Synaptics_TouchPad" {
-#     dwt enabled
-#     tap enabled
-#     middle_emulation enabled
-# }
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-
-# enable touchpad speed and features
-#input "type:touchpad" {
-#	tap enabled
-#	dwt enabled
-#	drag enabled
-#	scroll_factor 0.7
-#	pointer_accel 0.2
-#	accel_profile adaptive
-#}
-
-# disable acceleration for mice
-input "type:pointer" {
-	accel_profile flat
-	pointer_accel 0
-}
-
-# keyboard layout and repeat settings
-input "type:keyboard" {
-    xkb_layout $lang
-	repeat_delay 300
-	repeat_rate 40
-}
-
-# numlock on/off
-input * xkb_numlock enabled
 
 #############         Bindings           ##################
 
@@ -245,16 +195,6 @@ bindsym $Mod+Shift+KP_Begin move container to workspace number 5; workspace numb
 bindsym $Mod+Shift+KP_Right move container to workspace number 6; workspace number 7
 bindsym $Mod+Shift+KP_Home  move container to workspace number 7; workspace number 7
 bindsym $Mod+Shift+KP_Up    move container to workspace number 8; workspace number 8
-
-# Workspace to monitor assignment (edit & unhash)
-workspace 1 output $Mon1
-workspace 2 output $Mon1
-workspace 3 output $Mon1
-workspace 4 output $Mon2
-workspace 5 output $Mon2
-workspace 6 output $Mon2
-# workspace 7 output $Mon1
-# workspace 8 output $Mon1
 
 ############      Container/Window control  ############
 
@@ -370,7 +310,7 @@ bindsym $Mod+Control+Shift+minus gaps outer all     minus 5
 ############    application settings   ############
 
 # focus, floating, & sticky
-for_window [app_id="(?i)(?:blueman-manager|azote|gnome-disks|nwg-shell-config)"] floating enable
+for_window [app_id="(?i)(?:blueman-manager|azote|gnome-disks|nwg-shell-config|nwg-display)"] floating enable
 for_window [app_id="(?i)(?:pavucontrol|nm-connection-editor|gsimplecal|galculator)"] floating enable
 for_window [class="(?i)(?:lxappearance)"] floating enable
 # for_window [app_id="(?i)(?:firefox|chromium)"] border none
@@ -383,7 +323,7 @@ for_window [app_id="discover-overlay"] floating enable, resize set width 660, re
 for_window [app_id="piper"] floating enable, resize set width 980, resize set height 340
 for_window [app_id="(?i)firefox" title="^(?i)(?:about (?:.*firefox|tor browser)|extension:|page info)"] floating enable
 for_window [app_id="(?i)firefox" title="(?i)sharing indicator"] floating enable, move position 0 0
-for_window [class="(?i)steam" title="^(?i)(?:steam guard|friends list|create or select|steam - system information)"] floating enable
+for_window [class="(?i)steam" title="^(?i)(?:friends list|create or select|steam.*(?:guard|information|updater))"] floating enable
 for_window [class="(?i)steam" title="^(?i)steam - news"] floating enable, resize set width 630, resize set height 830
 for_window [app_id="thunar" title="^(?i)file operation"] floating enable
 for_window [app_id="python3" title="^(?i)Tor Browser Launcher Settings"] floating enable
