@@ -341,3 +341,5 @@ bindsym $Mod+Control+c exec clipman pick -t wofi
 exec $HOME/.config/sway/loopback.sh
 
 include /etc/sway/config.d/*
+
+exec thunar --daemon
