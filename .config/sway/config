@@ -320,13 +320,18 @@ for_window [app_id="org.gnome.Calendar"] floating enable, resize set width 600, 
 for_window [app_id="org.gnome.Calculator"] floating enable, resize set width 400, resize set height 600
 for_window [app_id="discover-overlay"] floating enable, resize set width 660, resize set height 800
 for_window [app_id="piper"] floating enable, resize set width 980, resize set height 340
-for_window [app_id="(?i)firefox" title="^(?i)(?:about (?:.*firefox|tor browser)|extension:|page info)"] floating enable
+for_window [app_id="(?i)firefox" title="^(?i)(?:about( mozilla)? firefox|extension:|page info)"] floating enable
+for_window [app_id="(?i)Tor Browser" title="^(?i)(?:about tor browser|extension:|page info)"] floating enable
 for_window [app_id="(?i)firefox" title="(?i)sharing indicator"] floating enable, move position 0 0
 for_window [class="(?i)steam"] floating enable
 for_window [class="(?i)steam" title="^(?i)steam - news"] floating enable, resize set width 630, resize set height 830
 for_window [app_id="thunar" title="^(?i)file operation"] floating enable
 for_window [app_id="python3" title="^(?i)Tor Browser Launcher Settings"] floating enable
 for_window [app_id="virt-manager" title="^Virtual Machine Manager$"] floating enable, resize set width 800, resize set height 600
+for_window [app_id="nemo" title="Properties$"] floating enable
+for_window [app_id="solvespace" title="^Property Browser"] floating enable
+for_window [app_id="ultimaker.Ultimaker-Cura" title="(?i)(?:marketplace|post processing|cura backups|license agreement|Ultimaker-Cura|settings|upload to|Multiply Selected Model)"] floating enable
+for_window [class="(?i)vtk" title="F3D"] floating enable, resize set width 600, resize set height 600
 # for_window [app_id="(?i)(?:terraria)"] border none
 
 floating_maximum_size 1024 x 1024
