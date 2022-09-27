@@ -1,6 +1,7 @@
+exec rm /tmp/nwg-shell-check-update.lock
 exec swaync -s /home/rubin/.config/swaync/style.css
 exec nm-applet --indicator
-exec_always autotiling -w 1 2 3 4 5 6 7 8
+exec_always nwg-autotiling -w 1 2 3 4 5 6 7 8
 exec_always nwg-drawer -r -c 6 -is 64 -fscol 2 -nofs -nocats -s preset-1.css -term alacritty
 exec_always nwg-panel -c preset-chr -s preset-chr.css
 exec_always nwg-shell-check-updates

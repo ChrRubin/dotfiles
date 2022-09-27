@@ -36,18 +36,19 @@
         "7",
         "8"
       ],
-      "name-max-len": 10,
+      "name-max-len": 50,
       "image-size": 16,
       "workspaces-spacing": 5,
       "task-padding": 2,
       "show-app-icon": true,
-      "show-app-name": true,
+      "show-app-name": false,
       "show-layout": false,
       "workspace-buttons": false,
       "all-workspaces": true,
       "mark-autotiling": true,
       "mark-xwayland": true,
-      "all-outputs": false
+      "all-outputs": false,
+      "angle": 0.0
     },
     "controls-settings": {
       "alignment": "right",
@@ -72,7 +73,7 @@
         },
         {
           "name": "Outputs",
-          "icon": "display",
+          "icon": "nwg-displays",
           "cmd": "nwg-displays"
         },
         {
@@ -120,7 +121,11 @@
       "window-width": 320,
       "window-margin": 6,
       "backlight-device": "",
-      "root-css-name": "controls-overview"
+      "root-css-name": "controls-overview",
+      "backlight-controller": "light",
+      "window-margin-horizontal": 0,
+      "window-margin-vertical": 0,
+      "angle": 0.0
     },
     "playerctl": {},
     "clock": {
@@ -134,7 +139,16 @@
       "on-scroll-down": "",
       "css-name": "clock",
       "root-css-name": "root-clock",
-      "tooltip-date-format": true
+      "tooltip-date-format": true,
+      "angle": 0.0,
+      "calendar-path": "",
+      "calendar-css-name": "calendar-window",
+      "calendar-placement": "top-right",
+      "calendar-margin-horizontal": 0,
+      "calendar-margin-vertical": 0,
+      "calendar-icon-size": 24,
+      "calendar-interval": 60,
+      "calendar-on": true
     },
     "executor-updates": {
       "script": "sway-check-updates",
@@ -262,7 +276,10 @@
       "label-position": "right",
       "css-name": "",
       "icon-size": 16
-    }
+    },
+    "exclusive-zone": true,
+    "openweather": {},
+    "brightness-slider": {}
   },
   {
     "name": "sec-top",
@@ -353,18 +370,19 @@
         "7",
         "8"
       ],
-      "name-max-len": 10,
+      "name-max-len": 50,
       "image-size": 16,
       "workspaces-spacing": 5,
       "task-padding": 2,
       "show-app-icon": true,
-      "show-app-name": true,
+      "show-app-name": false,
       "show-layout": false,
       "workspace-buttons": false,
       "all-workspaces": true,
       "mark-autotiling": true,
       "mark-xwayland": true,
-      "all-outputs": false
+      "all-outputs": false,
+      "angle": 0.0
     },
     "sway-workspaces": {
       "numbers": [
@@ -472,6 +490,9 @@
       "label-position": "right",
       "css-name": "",
       "icon-size": 16
-    }
+    },
+    "exclusive-zone": true,
+    "openweather": {},
+    "brightness-slider": {}
   }
 ]
