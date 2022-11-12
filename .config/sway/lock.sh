@@ -7,7 +7,7 @@ transparent="00000000"
 swaylock \
   --image "$HOME/Pictures/wahtcher-bg.jpg" \
   --scaling fill \
-  --ignore-empty-password \
+  --submit-on-touch \
   --daemonize \
   --fade-in 0.5 \
   --indicator \
