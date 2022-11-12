@@ -1,5 +1,6 @@
 function fftrans
-  argparse lw lh pw ph width= height= -- $argv
+  argparse lw lh pw ph atrans width= height= -- $argv
+  set -f a -c:a copy
   set -f w -1
   set -f h -1
   if set -q _flag_lw
@@ -17,12 +18,15 @@ function fftrans
   if set -q _flag_height
     set -f h $_flag_height
   end
+  if set -q _flag_atrans
+    set -f -e a
+  end
   set -f scale $w:$h
   for i in $argv
     set -f ori $i
     set -f old {$ori}.old
     mv $i $old
-    ffmpeg -i $old -vf scale=$scale -c:a copy -y $ori
+    ffmpeg -i $old -vf scale=$scale $a -y $ori
     if test $status != 0
       mv $old $ori
     end
