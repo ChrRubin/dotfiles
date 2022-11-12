@@ -1,7 +1,7 @@
 [
   {
     "name": "top",
-    "output": "HDMI-A-2",
+    "output": "",
     "layer": "bottom",
     "position": "top",
     "height": 30,
@@ -16,6 +16,7 @@
     "css-name": "panel-top",
     "icons": "light",
     "modules-left": [
+      "button-launcher",
       "sway-workspaces"
     ],
     "modules-center": [
@@ -26,7 +27,8 @@
       "executor-cpubar",
       "scratchpad",
       "executor-updates",
-      "tray"
+      "tray",
+      "button-help"
     ],
     "sway-taskbar": {},
     "controls-settings": {
@@ -48,14 +50,14 @@
           "cmd": "azote"
         },
         {
-          "name": "Look & Feel",
-          "icon": "preferences-desktop-theme",
-          "cmd": "lxappearance; import-gsettings"
+          "name": "GTK settings",
+          "icon": "nwg-look",
+          "cmd": "nwg-look"
         },
         {
-          "name": "Outputs",
-          "icon": "display",
-          "cmd": "wdisplays && sway-save-outputs"
+          "name": "Displays",
+          "icon": "nwg-displays",
+          "cmd": "nwg-displays"
         },
         {
           "name": "Panel settings",
@@ -64,7 +66,7 @@
         },
         {
           "name": "Shell settings",
-          "icon": "nwg-shell",
+          "icon": "nwg-shell-config",
           "cmd": "nwg-shell-config"
         }
       ],
@@ -74,7 +76,7 @@
         "items": [
           {
             "name": "Lock",
-            "cmd": "swaylock -f -c 000000"
+            "cmd": "nwg-lock"
           },
           {
             "name": "Logout",
@@ -95,6 +97,7 @@
       "icon-size": 18,
       "hover-opens": false,
       "leave-closes": true,
+      "click-closes": false,
       "css-name": "controls-window",
       "net-interface": "wlo1",
       "system-shutdown-symbolic": "system-shutdown",
@@ -102,7 +105,11 @@
       "window-width": 320,
       "window-margin": 6,
       "backlight-device": "",
-      "root-css-name": "controls-overview"
+      "root-css-name": "controls-overview",
+      "backlight-controller": "light",
+      "window-margin-horizontal": 4,
+      "window-margin-vertical": 4,
+      "angle": 0.0
     },
     "playerctl": {},
     "clock": {
@@ -131,14 +138,6 @@
       "icon-placement": "left"
     },
     "width": "auto",
-    "button-config": {
-      "command": "nwg-panel-config",
-      "icon": "nwg-panel",
-      "label": "",
-      "label-position": "right",
-      "css-name": "button-custom",
-      "icon-size": 16
-    },
     "sway-workspaces": {
       "numbers": [
         "1",
@@ -212,6 +211,27 @@
       "icon-size": 16,
       "interval": 1,
       "always-show-icon": true
+    },
+    "exclusive-zone": true,
+    "openweather": {},
+    "brightness-slider": {},
+    "button-launcher": {
+      "command": "nwg-drawer",
+      "icon": "grid",
+      "label": "",
+      "label-position": "right",
+      "tooltip": "Application drawer [Alt]+F1",
+      "css-name": "",
+      "icon-size": 16
+    },
+    "button-help": {
+      "command": "nwg-shell-help",
+      "icon": "help-about",
+      "label": "",
+      "label-position": "right",
+      "tooltip": "Show/hide help [S]+F1",
+      "css-name": "",
+      "icon-size": 16
     }
   }
 ]

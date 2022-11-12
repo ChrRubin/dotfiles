@@ -8,7 +8,7 @@ include keyboard
 include pointer
 include touchpad
 
-# ArchLabs sway config
+# nwg-shell sway config
 # Read `man 5 sway` for reference.
 
 # border & title
@@ -64,10 +64,6 @@ mode "nag" {
 # 'Reload Sway' option will be initially selected instead of the 'Exit Sway' option
 swaynag_command $nag -R
 
-############### Apply GTK settings ##################
-
-#exec_always import-gsettings
-
 ###############     Autostart      ##################
 
 #exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -80,17 +76,6 @@ exec ~/.azotebg
 #set $laptop eDP-1
 #bindswitch lid:on output $laptop disable
 #bindswitch lid:off output $laptop enable
-
-### Idle configuration
-#exec swayidle -w \
-#    timeout 300 'swaylock -f -c 212121' \
-#    timeout 305 'swaymsg "output * dpms off"' \
-#    resume 'swaymsg "output * dpms on"' \
-#    before-sleep 'swaylock -f -c 212121'
-#
-# This will lock your screen after 3000 seconds of inactivity, then turn off
-# your displays after another 3300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 # wob
 set $wob wob --anchor bottom --margin 50 --border-color "#ffffffff" --background-color "#1e1e1eff" --bar-color "#ffffffff"
@@ -109,6 +94,8 @@ bindsym $Mod+Return       exec $term
 # bindsym Mod1+Shift+Return exec $term
 bindsym Control+Mod1+t   exec $term
 bindsym $Mod+t            exec $term
+bindsym $Mod+F2           exec $term
+bindsym $Mod+s            exec nwg-shell-config
 # bindsym $Mod+d            exec $dock
 bindsym $Mod+e            exec $editor
 bindsym $Mod+w            exec $browser
@@ -116,6 +103,8 @@ bindsym $Mod+d     exec $launcher
 # bindsym Mod1+F1           exec $launcher
 bindsym $Mod+f            exec $filemanager
 bindsym $Mod+c            exec swaync-client -t
+#bindsym Mod1+l            exec nwg-lock
+bindsym $Mod+F1           exec nwg-shell-help
 
 # Exit menu
 #bindsym $Mod+x exec $exit
@@ -263,7 +252,7 @@ bindsym $Mod+r mode "resize"
 # bindsym Mod1+Right resize grow   width  10 px or 1 ppt
 
 # layout toggle
-bindsym Mod1+Tab layout toggle tabbed split
+bindsym Mod1+Tab layout toggle tabbed stacking split
 bindsym $Mod+Tab layout toggle splitv splith
 
 # switch to workspace with urgent window
@@ -282,29 +271,22 @@ default_orientation horizontal
 # make the current focus fullscreen
 bindsym $Mod+Shift+f fullscreen
 
-# show/hide help
-# bindsym Mod1+h exec pkill -f -12 nwg-wrapper
-# move help to front/back
-# bindsym Mod1+Shift+h exec pkill -f -10 nwg-wrapper
-
 bindsym $Mod+Shift+p sticky toggle
 
 ###############      Border & Gaps     ###############
 
 # changing border style
-bindsym $Mod+n border normal
-bindsym $Mod+y border pixel 1
-bindsym $Mod+u border none
+bindsym $Mod+b border toggle
 
 # change gaps
 bindsym $Mod+plus                gaps inner current plus  5
 bindsym $Mod+minus               gaps inner current minus 5
 bindsym $Mod+Shift+plus          gaps outer current plus  5
 bindsym $Mod+Shift+minus         gaps outer current minus 5
-bindsym $Mod+Control+plus        gaps inner all     plus  5
-bindsym $Mod+Control+minus       gaps inner all     minus 5
-bindsym $Mod+Control+Shift+plus  gaps outer all     plus  5
-bindsym $Mod+Control+Shift+minus gaps outer all     minus 5
+bindsym $Mod+Control+plus        gaps inner current plus  5
+bindsym $Mod+Control+minus       gaps inner current minus 5
+bindsym $Mod+Control+Shift+plus  gaps outer current plus  5
+bindsym $Mod+Control+Shift+minus gaps outer current minus 5
 
 ############    application settings   ############
 

@@ -1,7 +1,7 @@
 [
   {
     "name": "top",
-    "output": "All",
+    "output": "",
     "layer": "bottom",
     "position": "top",
     "width": "auto",
@@ -17,20 +17,23 @@
     "icons": "light",
     "menu-start": "off",
     "modules-left": [
+      "button-launcher",
       "playerctl"
     ],
     "modules-center": [
       "clock"
     ],
     "modules-right": [
-      "scratchpad",
       "executor-updates",
-      "tray"
+      "tray",
+      "button-help"
     ],
     "controls": "right",
     "controls-settings": {
       "alignment": "right",
       "components": [
+        "brightness",
+        "battery",
         "volume"
       ],
       "commands": {
@@ -45,14 +48,14 @@
           "cmd": "azote"
         },
         {
-          "name": "Look & Feel",
-          "icon": "preferences-desktop-theme",
-          "cmd": "lxappearance; import-gsettings gtk-theme:gtk-theme-name icon-theme:gtk-icon-theme-name cursor-theme:gtk-cursor-theme-name"
+          "name": "GTK settings",
+          "icon": "nwg-look",
+          "cmd": "nwg-look"
         },
         {
-          "name": "Outputs",
-          "icon": "display",
-          "cmd": "wdisplays && sway-save-outputs"
+          "name": "Displays",
+          "icon": "nwg-displays",
+          "cmd": "nwg-displays"
         },
         {
           "name": "Panel settings",
@@ -61,7 +64,7 @@
         },
         {
           "name": "Shell settings",
-          "icon": "nwg-shell",
+          "icon": "nwg-shell-config",
           "cmd": "nwg-shell-config"
         }
       ],
@@ -71,7 +74,7 @@
         "items": [
           {
             "name": "Lock",
-            "cmd": "swaylock -f -c 000000"
+            "cmd": "nwg-lock"
           },
           {
             "name": "Logout",
@@ -91,7 +94,8 @@
       "interval": 1,
       "icon-size": 18,
       "hover-opens": false,
-      "leave-closes": true,
+      "leave-closes": false,
+      "click-closes": true,
       "css-name": "controls-window",
       "net-interface": "wlo1",
       "system-shutdown-symbolic": "system-shutdown",
@@ -160,11 +164,32 @@
       "icon-size": 16,
       "interval": 1,
       "always-show-icon": true
+    },
+    "exclusive-zone": true,
+    "openweather": {},
+    "brightness-slider": {},
+    "button-launcher": {
+      "command": "nwg-drawer",
+      "icon": "grid",
+      "label": "",
+      "label-position": "right",
+      "tooltip": "Application drawer [Alt]+F1",
+      "css-name": "",
+      "icon-size": 16
+    },
+    "button-help": {
+      "command": "nwg-shell-help",
+      "icon": "help-about",
+      "label": "",
+      "label-position": "right",
+      "tooltip": "Show/hide help [S]+F1",
+      "css-name": "",
+      "icon-size": 16
     }
   },
   {
     "name": "bottom",
-    "output": "All",
+    "output": "",
     "layer": "bottom",
     "position": "bottom",
     "height": 30,
@@ -176,33 +201,21 @@
     "items-padding": 0,
     "css-name": "panel-bottom",
     "icons": "",
-    "menu-start": "left",
+    "menu-start": "off",
     "width": "auto",
     "controls": "off",
     "controls-settings": {},
-    "scratchpad": {},
-    "clock": {},
-    "menu-start-settings": {
-      "cmd-lock": "swaylock -f -c 000000",
-      "cmd-logout": "swaymsg exit",
-      "cmd-restart": "systemctl reboot",
-      "cmd-shutdown": "systemctl -i poweroff",
-      "autohide": true,
-      "file-manager": "thunar",
-      "height": 0,
-      "icon-size-large": 32,
-      "icon-size-small": 16,
-      "icon-size-button": 16,
-      "margin-bottom": 0,
-      "margin-left": 0,
-      "margin-right": 0,
-      "margin-top": 0,
-      "padding": 2,
-      "terminal": "foot",
-      "width": 0
+    "scratchpad": {
+      "css-name": "",
+      "icon-size": 16,
+      "angle": 0.0,
+      "single-output": false
     },
+    "clock": {},
+    "menu-start-settings": {},
     "modules-left": [
-      "sway-taskbar"
+      "sway-taskbar",
+      "scratchpad"
     ],
     "modules-center": [],
     "modules-right": [
@@ -301,6 +314,9 @@
     },
     "playerctl": {},
     "sway-workspaces": {},
+    "exclusive-zone": true,
+    "openweather": {},
+    "brightness-slider": {},
     "dwl-tags": {},
     "tray": {}
   }

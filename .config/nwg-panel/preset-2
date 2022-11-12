@@ -16,16 +16,17 @@
     "css-name": "panel-bottom",
     "icons": "",
     "modules-left": [
-      "sway-taskbar"
+      "sway-taskbar",
+      "scratchpad"
     ],
     "modules-center": [],
     "modules-right": [
       "executor-cpuavg",
       "executor-cpubar",
-      "scratchpad",
       "executor-updates",
       "clock",
-      "tray"
+      "tray",
+      "button-help"
     ],
     "sway-taskbar": {
       "workspace-buttons": false,
@@ -69,14 +70,14 @@
           "cmd": "azote"
         },
         {
-          "name": "Look & Feel",
-          "icon": "preferences-desktop-theme",
-          "cmd": "lxappearance; import-gsettings gtk-theme:gtk-theme-name icon-theme:gtk-icon-theme-name cursor-theme:gtk-cursor-theme-name"
+          "name": "GTK settings",
+          "icon": "nwg-look",
+          "cmd": "nwg-look"
         },
         {
-          "name": "Outputs",
-          "icon": "display",
-          "cmd": "wdisplays && sway-save-outputs"
+          "name": "Displays",
+          "icon": "nwg-displays",
+          "cmd": "nwg-displays"
         },
         {
           "name": "Panel settings",
@@ -85,7 +86,7 @@
         },
         {
           "name": "Shell settings",
-          "icon": "nwg-shell",
+          "icon": "nwg-shell-config",
           "cmd": "nwg-shell-config"
         }
       ],
@@ -95,7 +96,7 @@
         "items": [
           {
             "name": "Lock",
-            "cmd": "swaylock -f -c 000000"
+            "cmd": "nwg-lock"
           },
           {
             "name": "Logout",
@@ -116,6 +117,7 @@
       "icon-size": 16,
       "hover-opens": false,
       "leave-closes": true,
+      "click-closes": false,
       "css-name": "controls-window",
       "net-interface": "wlan0",
       "system-shutdown-symbolic": "system-shutdown",
@@ -155,7 +157,9 @@
     "sway-workspaces": {},
     "scratchpad": {
       "css-name": "",
-      "icon-size": 20
+      "icon-size": 24,
+      "angle": 0.0,
+      "single-output": false
     },
     "menu-start": "left",
     "menu-start-settings": {
@@ -225,6 +229,18 @@
       "icon-size": 16,
       "interval": 1,
       "always-show-icon": true
+    },
+    "exclusive-zone": true,
+    "openweather": {},
+    "brightness-slider": {},
+    "button-help": {
+      "command": "nwg-shell-help",
+      "icon": "help-about",
+      "label": "",
+      "label-position": "right",
+      "tooltip": "Show/hide help [S]+F1",
+      "css-name": "",
+      "icon-size": 16
     }
   }
 ]

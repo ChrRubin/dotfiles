@@ -67,12 +67,12 @@
           "cmd": "azote"
         },
         {
-          "name": "Look & Feel",
+          "name": "GTK settings",
           "icon": "nwg-look",
           "cmd": "nwg-look"
         },
         {
-          "name": "Outputs",
+          "name": "Displays",
           "icon": "nwg-displays",
           "cmd": "nwg-displays"
         },
@@ -83,7 +83,7 @@
         },
         {
           "name": "Shell settings",
-          "icon": "nwg-shell",
+          "icon": "nwg-shell-config",
           "cmd": "nwg-shell-config"
         }
       ],
@@ -115,7 +115,7 @@
       "hover-opens": false,
       "leave-closes": true,
       "css-name": "controls-window",
-      "net-interface": "wlo1",
+      "net-interface": "enp5s0",
       "system-shutdown-symbolic": "system-shutdown",
       "output-switcher": false,
       "window-width": 320,
@@ -125,7 +125,8 @@
       "backlight-controller": "light",
       "window-margin-horizontal": 0,
       "window-margin-vertical": 0,
-      "angle": 0.0
+      "angle": 0.0,
+      "click-closes": false
     },
     "playerctl": {},
     "clock": {
@@ -143,7 +144,7 @@
       "angle": 0.0,
       "calendar-path": "",
       "calendar-css-name": "calendar-window",
-      "calendar-placement": "top-right",
+      "calendar-placement": "top",
       "calendar-margin-horizontal": 0,
       "calendar-margin-vertical": 0,
       "calendar-icon-size": 24,
@@ -414,7 +415,16 @@
       "root-css-name": "root-clock",
       "css-name": "clock",
       "interval": 1,
-      "tooltip-date-format": true
+      "tooltip-date-format": true,
+      "angle": 0.0,
+      "calendar-path": "",
+      "calendar-css-name": "calendar-window",
+      "calendar-placement": "top-right",
+      "calendar-margin-horizontal": 0,
+      "calendar-margin-vertical": 0,
+      "calendar-icon-size": 24,
+      "calendar-interval": 60,
+      "calendar-on": true
     },
     "playerctl": {
       "buttons-position": "left",
@@ -493,6 +503,7 @@
     },
     "exclusive-zone": true,
     "openweather": {},
-    "brightness-slider": {}
+    "brightness-slider": {},
+    "homogeneous": true
   }
 ]
